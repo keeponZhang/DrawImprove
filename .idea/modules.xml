@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DrawImprove.iml" filepath="$PROJECT_DIR$/DrawImprove.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog10_XMode_AvoidXfermode/blog10_XMode_AvoidXfermode.iml" filepath="$PROJECT_DIR$/blog10_XMode_AvoidXfermode/blog10_XMode_AvoidXfermode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog10_Xfermode/blog10_Xfermode.iml" filepath="$PROJECT_DIR$/blog10_Xfermode/blog10_Xfermode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog13_blogCanvas/blog13_blogCanvas.iml" filepath="$PROJECT_DIR$/blog13_blogCanvas/blog13_blogCanvas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog14_blogCanvas/blog14_blogCanvas.iml" filepath="$PROJECT_DIR$/blog14_blogCanvas/blog14_blogCanvas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog18_BitmapShader/blog18_BitmapShader.iml" filepath="$PROJECT_DIR$/blog18_BitmapShader/blog18_BitmapShader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog18_tryBitmapShader/blog18_tryBitmapShader.iml" filepath="$PROJECT_DIR$/blog18_tryBitmapShader/blog18_tryBitmapShader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog1_try_Paint_Blog/blog1_try_Paint_Blog.iml" filepath="$PROJECT_DIR$/blog1_try_Paint_Blog/blog1_try_Paint_Blog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog2_try_Paint_Blog/blog2_try_Paint_Blog.iml" filepath="$PROJECT_DIR$/blog2_try_Paint_Blog/blog2_try_Paint_Blog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog3_try_region_blog/blog3_try_region_blog.iml" filepath="$PROJECT_DIR$/blog3_try_region_blog/blog3_try_region_blog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog4_try_canvas_blog/blog4_try_canvas_blog.iml" filepath="$PROJECT_DIR$/blog4_try_canvas_blog/blog4_try_canvas_blog.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="C:/Program Files/Android/gradle-4.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/blog10_XMode_AvoidXfermode" />
+            <option value="$PROJECT_DIR$/blog10_Xfermode" />
+            <option value="$PROJECT_DIR$/blog13_blogCanvas" />
+            <option value="$PROJECT_DIR$/blog14_blogCanvas" />
+            <option value="$PROJECT_DIR$/blog18_BitmapShader" />
+            <option value="$PROJECT_DIR$/blog18_tryBitmapShader" />
+            <option value="$PROJECT_DIR$/blog1_try_Paint_Blog" />
+            <option value="$PROJECT_DIR$/blog2_try_Paint_Blog" />
+            <option value="$PROJECT_DIR$/blog3_try_region_blog" />
+            <option value="$PROJECT_DIR$/blog4_try_canvas_blog" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

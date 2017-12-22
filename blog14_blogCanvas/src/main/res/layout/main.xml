@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="3">
+
+        <TableRow>
+
+            <Button
+                    android:id="@+id/bitmapcanvasview_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="BitmapCanvasView"/>
+
+            <Button
+                    android:id="@+id/xfermodeview_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="XfermodeView"/>
+
+            <Button
+                    android:id="@+id/matrix_save_flag_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="MATRIX_SAVE_FLAG"/>
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                    android:id="@+id/savelayeruseexample_3_1_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="SaveLayerUseExample_3_1"/>
+
+            <Button
+                    android:id="@+id/clip_save_flag_view_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="CLIP_SAVE_FLAG_View"/>
+
+            <Button
+                    android:id="@+id/alpha_color_falg_view_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ALPHA_COLOR_FALG_VIEW"/>
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                    android:id="@+id/clip_to_layer_save_flag_view_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="CLIP_TO_LAYER_SAVE_FLAG"/>
+
+            <Button
+                    android:id="@+id/savelayeralphaview_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="SaveLayerAlphaView"/>
+
+            <Button
+                    android:id="@+id/restoretocountview_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="RestoreToCountView"/>
+        </TableRow>
+    </TableLayout>
+
+    <com.harvic.blogCanvas.BitmapCanvasView
+            android:id="@+id/bitmapcanvasview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"/>
+
+    <com.harvic.blogCanvas.XfermodeView
+            android:id="@+id/xfermodeview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+    <com.harvic.blogCanvas.MATRIX_SAVE_FLAG_View
+            android:id="@+id/matrix_save_flag_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+    <com.harvic.blogCanvas.SaveLayerUseExample_3_1
+            android:id="@+id/savelayeruseexample_3_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+    <com.harvic.blogCanvas.CLIP_SAVE_FLAG_View
+            android:id="@+id/clip_save_flag_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+    <com.harvic.blogCanvas.ALPHA_COLOR_FALG_VIEW
+            android:id="@+id/alpha_color_falg_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+    <com.harvic.blogCanvas.CLIP_TO_LAYER_SAVE_FLAG_VIEW
+            android:id="@+id/clip_to_layer_save_flag_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+    <com.harvic.blogCanvas.SaveLayerAlphaView
+            android:id="@+id/savelayeralphaview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+    <com.harvic.blogCanvas.RestoreToCountView
+            android:id="@+id/restoretocountview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+</LinearLayout>
+

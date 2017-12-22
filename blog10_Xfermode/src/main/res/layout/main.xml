@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <Button
+                android:id="@+id/btn_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="文章三.1示例代码SRC_IN"/>
+
+        <Button
+                android:id="@+id/btn_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="googleSRC_IN示例代码"/>
+
+        <Button
+                android:id="@+id/btn_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="最终合成样式"/>
+
+
+    </LinearLayout>
+
+
+    <com.harvic.BlogXfermode.demo_3_1_view
+            android:id="@+id/view_1"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <com.harvic.BlogXfermode.demo_google_view
+            android:id="@+id/view_2"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <com.harvic.BlogXfermode.demo_fixed_views
+            android:id="@+id/view_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>
+
