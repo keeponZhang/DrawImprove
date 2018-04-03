@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+
+    <com.harvic.BlogPaintBasic.MyView
+            android:id="@+id/myview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    <com.harvic.BlogPaintBasic.PathDashPathView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    <!--dashEffect 动画view
+        由于上面的MyView的高度是match_parent的,所以要看到这个控件的效果,需要把上面那个控件注起来
+    -->
+    <com.harvic.BlogPaintBasic.MyDashView
+            android:id="@+id/my_dash_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+
+</LinearLayout>
+

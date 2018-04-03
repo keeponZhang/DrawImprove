@@ -9,17 +9,34 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/aigeblog1_customViewDemo" />
+            <option value="$PROJECT_DIR$/aigeblog2_customViewDemo" />
+            <option value="$PROJECT_DIR$/aigeblog3_customViewDemo" />
+            <option value="$PROJECT_DIR$/aigeblog4_customViewDemo" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/blog10_XMode_AvoidXfermode" />
             <option value="$PROJECT_DIR$/blog10_Xfermode" />
+            <option value="$PROJECT_DIR$/blog11_PorterDuff" />
+            <option value="$PROJECT_DIR$/blog12_PorterDuff_2" />
             <option value="$PROJECT_DIR$/blog13_blogCanvas" />
             <option value="$PROJECT_DIR$/blog14_blogCanvas" />
+            <option value="$PROJECT_DIR$/blog15_QQRedPoint" />
+            <option value="$PROJECT_DIR$/blog16_BlurMaskFilter" />
             <option value="$PROJECT_DIR$/blog18_BitmapShader" />
             <option value="$PROJECT_DIR$/blog18_tryBitmapShader" />
             <option value="$PROJECT_DIR$/blog1_try_Paint_Blog" />
             <option value="$PROJECT_DIR$/blog2_try_Paint_Blog" />
             <option value="$PROJECT_DIR$/blog3_try_region_blog" />
             <option value="$PROJECT_DIR$/blog4_try_canvas_blog" />
+            <option value="$PROJECT_DIR$/blog5_blogDrawText" />
+            <option value="$PROJECT_DIR$/blog6_BerzDemo" />
+            <option value="$PROJECT_DIR$/blog6_MovePath" />
+            <option value="$PROJECT_DIR$/blog6_MovePathByQuad" />
+            <option value="$PROJECT_DIR$/blog6_MoveWave" />
+            <option value="$PROJECT_DIR$/blog7_PaintBasic" />
+            <option value="$PROJECT_DIR$/blog8_ColorMatrix" />
+            <option value="$PROJECT_DIR$/blog8_ProgressMetrics" />
+            <option value="$PROJECT_DIR$/blog9_ColorFilter" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
