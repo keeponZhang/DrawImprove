@@ -51,27 +51,28 @@ public class MyRegionView extends View {
 		Region region2= new Region(rect2);
 
 //		//取两个区域的交集		
-//		region.op(region2, Region.Op.INTERSECT);
+// 		region.op(region2, Region.Op.INTERSECT);
 		
 //		//DIFFERENCE,补集,最终区域为region1 与 region2不同的区域  
-//		region.op(region2, Region.Op.DIFFERENCE);
+// 		region.op(region2, Region.Op.DIFFERENCE);
 
 //		//REPLACE,替换,得用传入的区域替换当前的区域
-//		region.op(region2, Region.Op.REPLACE);
+// 		region.op(region2, Region.Op.REPLACE);
 
 //		//REVERSE_DIFFERENCE,相当于region2.op(region, Op.INTERSECT);即最终区域为region2 与 region1不同的区域  
-//		region.op(region2, Region.Op.REVERSE_DIFFERENCE);
+		region.op(region2, Region.Op.REVERSE_DIFFERENCE);
 
 //		UNION,并集
 //		region.op(region2, Region.Op.UNION);
 
 //		//XOR,异并集
-		region.op(region2, Region.Op.XOR);
+// 		region.op(region2, Region.Op.XOR);
 //
 //		//再构造一个画笔,填充Region操作结果
 		Paint paint_fill = new Paint();
 		paint_fill.setColor(Color.GREEN);
 		paint_fill.setStyle(Style.FILL);
+		//这里不能用region2
 		drawRegion(canvas, region, paint_fill);
 
 
