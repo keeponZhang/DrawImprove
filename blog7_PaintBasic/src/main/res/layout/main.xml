@@ -18,7 +18,7 @@
     <!--dashEffect 动画view
         由于上面的MyView的高度是match_parent的,所以要看到这个控件的效果,需要把上面那个控件注起来
     -->
-    <com.harvic.BlogPaintBasic.MyDashView
+    <com.harvic.BlogPaintBasic.MyView
             android:id="@+id/my_dash_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>

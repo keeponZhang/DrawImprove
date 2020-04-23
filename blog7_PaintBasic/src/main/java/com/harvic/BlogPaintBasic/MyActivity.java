@@ -12,7 +12,7 @@ public class MyActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        MyDashView dashView = (MyDashView) findViewById(R.id.my_dash_view);
-        dashView.startAnim();
+        // MyDashView dashView = (MyDashView) findViewById(R.id.my_dash_view);
+        // dashView.startAnim();
     }
 }

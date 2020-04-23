@@ -39,22 +39,22 @@ public class MyView extends View {
         /**
          * DashPathEffect DEMO 效果
          */
-//        drawDashPathEffectDemo(canvas);
+       // drawDashPathEffectDemo(canvas);
 
         /**
          * DiscretePathEffect DEMO效果
-         */
-//        drawDiscretePathEffectDemo(canvas);
+         // */
+       // drawDiscretePathEffectDemo(canvas);
 
         /**
          * PathDashPathEffect效果
          */
-//        drawPathDashPathEffect(canvas);
+       drawPathDashPathEffect(canvas);
 
         /**
          * PathDashPathEffect DEMO效果
          */
-//        drawPathDashPathEffectDemo(canvas);
+       // drawPathDashPathEffectDemo(canvas);
 
         /**
          * ComposePathEffect与SumPathEffect
@@ -64,7 +64,7 @@ public class MyView extends View {
         /**
          * SubpixelText Demo
          */
-        drawSubpixelText(canvas);
+        // drawSubpixelText(canvas);
 
     }
 
@@ -242,14 +242,15 @@ public class MyView extends View {
         path.lineTo(400,150);
         path.lineTo(700,900);
         canvas.drawPath(path,paint);
-        canvas.drawPath(path,paint);
+        // canvas.drawPath(path,paint);
 
         canvas.translate(0,200);
 
         /**
          * 利用以另一个路径为单位,延着路径盖章.相当于PS的印章工具
          */
-        paint.setPathEffect(new PathDashPathEffect(getStampPath(),35,0, PathDashPathEffect.Style.MORPH));
+        //这个getStampPath是小的path
+        paint.setPathEffect(new PathDashPathEffect(getStampPath(),35,0, PathDashPathEffect.Style.ROTATE));
         canvas.drawPath(path,paint);
     }
 
