@@ -33,6 +33,7 @@ public class GuaGuaCardView_SRCOUT extends View{
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
+        //刮刮卡与橡皮擦的效果，就是底部多了一张图片
         canvas.drawBitmap(BmpText,0,0,mBitPaint);
 
         int layerId = canvas.saveLayer(0, 0, getWidth(), getHeight(), null, Canvas.ALL_SAVE_FLAG);

@@ -10,6 +10,9 @@ import android.view.View;
  * Created by qijian on 16/4/15.
  */
 public class EraserView_SRCOUT extends View {
+    // Mode.SRC_OUT从公式中可以看出，计算结果的透明度=Sa * (1 - Da)；说当目标图像图像完全透明时，计算结果将是透明的
+    // Mode.SRC_OUT简单来说，当目标图像有图像时结果显示空白像素，当目标图像没有图像时，结果显示源图像。
+    //逆向思维，被擦掉的是原图像，所以下面的图片是原图像，然后路径最为目标图标，目标图像与原图像相交，显示透明
     private Paint mBitPaint;
     private Bitmap BmpDST,BmpSRC;
     private Path mPath;
@@ -36,6 +39,8 @@ public class EraserView_SRCOUT extends View {
 
         //先把手指轨迹画到目标Bitmap上
         Canvas c = new Canvas(BmpDST);
+        //这里千万不能设置背景，不然全部相交，显示透明，就是没有东西显示在屏幕上
+        // c.drawColor(Color.YELLOW);
         c.drawPath(mPath,mBitPaint);
 
         //然后把目标图像画到画布上
