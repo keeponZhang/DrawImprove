@@ -80,6 +80,15 @@
                     android:layout_weight="1"
                     android:text="倒影图像SRCATOP"/>
         </TableRow>
+        <TableRow>
+
+        <Button
+            android:id="@+id/google_src_in"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="google_src_in"/>
+        </TableRow>
     </TableLayout>
 
     <com.harvic.BlogPorterDuff.MyView
@@ -134,5 +143,10 @@
             android:id="@+id/invertsrcatop_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
+    <com.harvic.BlogPorterDuff.GoogleXfermodes_SRC_IN
+        android:visibility="gone"
+        android:id="@+id/google_src_in_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </LinearLayout>
 

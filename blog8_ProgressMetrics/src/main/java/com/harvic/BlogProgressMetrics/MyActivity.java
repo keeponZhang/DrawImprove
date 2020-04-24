@@ -24,7 +24,7 @@ public class MyActivity extends Activity {
 
         mSeekBar.setMax(20);
         mSeekBar.setProgress(1);
-        mSeekBar.setProgress(10);
+        // mSeekBar.setProgress(10);
 
         mSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -54,6 +54,7 @@ public class MyActivity extends Activity {
         paint.setAntiAlias(true); // 设置抗锯齿,也即是边缘做平滑处理
         ColorMatrix mSaturationMatrix = new ColorMatrix();
 
+        // 取值为0表示完全无色彩，即灰度图像（黑白图像）；取值为1时，表示色彩不变动；当取值大于1时，显示色彩过度饱和
         mSaturationMatrix.setSaturation(progress);
 
         paint.setColorFilter(new ColorMatrixColorFilter(mSaturationMatrix));// 设置颜色变换效果

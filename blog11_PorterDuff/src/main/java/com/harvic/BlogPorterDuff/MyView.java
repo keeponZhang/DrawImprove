@@ -27,15 +27,17 @@ public class MyView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-
-        int layerID = canvas.saveLayer(0,0,width*2,height*2,mPaint,Canvas.ALL_SAVE_FLAG);
+        //有这个，背景定义蓝色，没有则是透明色，差别很大，这个是重点
+        // canvas.drawColor(Color.BLUE);
+        // int layerID = canvas.saveLayer(0,0,width*2,height*2,mPaint,Canvas.ALL_SAVE_FLAG);
 
         canvas.drawBitmap(dstBmp, 0, 0, mPaint);
-        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP));
+        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
         canvas.drawBitmap(srcBmp,width/2,height/2, mPaint);
+        // canvas.drawRect(width/2,height/2,width/2+width,height+height/2,mPaint);
         mPaint.setXfermode(null);
 
-        canvas.restoreToCount(layerID);
+        // canvas.restoreToCount(layerID);
 
     }
 

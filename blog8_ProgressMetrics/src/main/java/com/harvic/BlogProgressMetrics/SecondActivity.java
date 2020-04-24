@@ -56,7 +56,8 @@ public class SecondActivity extends Activity {
         Paint paint = new Paint(); // 新建paint
         paint.setAntiAlias(true); // 设置抗锯齿,也即是边缘做平滑处理
         ColorMatrix colorMatrix = new ColorMatrix();
-
+        // int axis：表示围绕哪个轴旋转，取值为0，1，2；取0时表示围绕红色轴旋转；取值1时，表示围绕绿色轴旋转；取值2时，表示围绕蓝色轴旋转；
+        // float degrees：表示旋转的度数
         colorMatrix.setRotate(0,progress-180);
 
         paint.setColorFilter(new ColorMatrixColorFilter(colorMatrix));// 设置颜色变换效果
