@@ -35,13 +35,16 @@ public class TextWave_DSTIN extends View {
         super.onDraw(canvas);
 
         generageWavePath();
+        // 所以我们要最终显示的被裁剪后的波纹图，所以DST目标图像就应该是波纹图(然后透过src的透明度，只展示文字波纹)
+
 
         //先清空bitmap上的图像,然后再画上Path
         Canvas c = new Canvas(BmpDST);
         c.drawColor(Color.BLACK, PorterDuff.Mode.CLEAR);
         c.drawPath(mPath,mPaint);
-
-        canvas.drawBitmap(BmpSRC,0,0,mPaint);
+        // 有些同学可能会问，为什么在saveLayer前，先要画一遍BmpSRC呢，这是因为我们在使用Mode.DST_IN时，
+        // 除了相交区域以外，其它区域都会因为有空白像素而消失不见了
+        // canvas.drawBitmap(BmpSRC,0,0,mPaint);
         int layerId = canvas.saveLayer(0, 0, getWidth(), getHeight(), null, Canvas.ALL_SAVE_FLAG);
         canvas.drawBitmap(BmpDST,0,0,mPaint);
         mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));

@@ -88,6 +88,12 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="google_src_in"/>
+            <Button
+                android:id="@+id/eraserview_dst"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="橡皮擦2"/>
         </TableRow>
     </TableLayout>
 
@@ -126,6 +132,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="gone"/>
+    <com.harvic.BlogPorterDuff.EraserView_DSTOUT
+        android:id="@+id/eraserview_view_dst"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
 
     <com.harvic.BlogPorterDuff.GuaGuaCardView_SRCOUT
             android:id="@+id/guaguaview_view"

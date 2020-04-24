@@ -143,7 +143,94 @@ public class MyView extends View {
 
         //Da=0 SRC_IN=[0,0] SRC_ATOP[0,x]都是透明效果
         //Da=1,SA此时也是1 SRC_IN=[Sa,Sc] SRC_ATOP[Da,SC]=[Sa,Sc]都是透明效果(此种情况比较特殊)
-        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP));
+        // mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP));
+
+
+
+
+
+        /*-------------------------------------DST相关模式--------------------------------------------------*/
+
+
+
+        // Mode.DST
+        // 计算公式为：[Da, Dc]
+        // 从公式中也可以看出，在处理源图像所在区域的相交问题时，正好与Mode.SRC相反，全部以目标图像显示
+        // mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST));
+
+        // Mode.DST_IN
+        // 计算公式为：[Da * Sa,Dc * Sa]
+        // 我们与Mode.SRC_IN的公式对比一下：SRC_IN:[Sa * Da, Sc * Da]
+        // 正好与SRC_IN相反，Mode.DST_IN是在相交时利用源图像的透明度来改变目标图像的透明度和饱和度。当源图像透明度为0时，目标图像就完全不显示。
+        //src_in还有四份之一角，DST_IN这里没有了，因为原图像不透明，所以相交的部分显示了目标图像，另外四分之三，因为目标头像的透明度是0，所以也不显示
+        // mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));
+
+
+        // Mode.DST_OUT
+        // 计算公式为：[Da * (1 - Sa), Dc * (1 - Sa)]
+        // 同样，我们拿这个公式与Mode.SRC_OUT对比一下，Mode.SRC_OUT：[Sa * (1 - Da), Sc * (1 - Da)]
+        // 可以看出Mode.SRC_OUT是利用目标图像的透明度的补值来改变源图像的透明度和饱和度。而Mode.DST_OUT反过来，
+        // 是通过源图像的透明度补值来改变目标图像的透明度和饱和度。
+        // 简单来说，在Mode.DST_OUT模式下，就是相交区域显示的是目标图像，目标图像的透明度和饱和度与源图像的透明度相反，
+        // 当源图像透明底是100%时，则相交区域为空值。当源图像透明度为0时，则完全显示目标图像。非相交区域完全显示目标图像。
+
+//         图中编号1的相交区域：在DST_OUT模式下，由于源图像的透明度是100%，所以计算后的结果图像在这个区域是空像素。
+//         图中编号2的非相交区域：在DST_OUT模式下，这个区域的源图像透明度仍为100%，所以计算后的结果图像在这个区域仍是空像素。
+//         所以我们做下简单的总结，当源图像区域透明度为100%时，所在区域计算结果为透明像素，当源图像的区域透明时，计算结果就是目标图像；
+//         这与SRC_OUT模式的结果正好相反，在SRC_OUT模式下，当目标图像区域透明度为100%时，所在区域计算结果为透明像素，当目标图像的区域透明时，计算结果就是源图像；
+//         所以，在上篇中，使用SRC_OUT模式实现的橡皮擦效果和刮刮卡效果都是可以使用DST_OUT模式实现的，只需要将SRC和DST所对应的图像翻转一下就可以了；
+// ————————————————
+//         版权声明：本文为CSDN博主「启舰」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+//         原文链接：https://blog.csdn.net/harvic880925/article/details/51288006
+//         mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_OUT));
+
+
+        //Mode.DST_OVER
+        //计算公式为：[Sa + (1 - Sa)*Da, Rc = Dc + (1 - Da)*Sc]
+        // 同样先写Mode.SRC_OVER对比一下，SRC_OVER：[Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]
+        // 所以它们的效果就是在SRC模式中以显示SRC图像为主变成了以显示DST图像为主。
+        // 从SRC模式中的使用目标图像控制结果图像的透明度和饱和度变成了由源图像控件结果图像的透明度和饱和度
+        // mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_OVER));
+
+
+
+        //Mode.DST_ATOP
+        // 计算公式为：[Sa, Sa * Dc + Sc * (1 - Da)]
+        // 由于在SRC中，我们知道了Mode.SRC_ATOP与MODE.SRC_IN的区别：
+        // 一般而言SRC_ATOP是可以和SRC_IN通用的，但SRC_ATOP所产生的效果图在目标图的透明度不是0或100%的时候，会比SRC_IN模式产生的图像更亮些；
+        // 我们再来对比下DST中的两个模式与SRC中的这两个模式中公式中区别：
+        // SRC_IN: [Sa * Da, Sc * Da]
+        // SRC_ATOP:[Da, Sc * Da + (1 - Sa) * Dc]
+        // DST_IN:[Da * Sa , Dc * Sa ]
+        // DST_ATOP:[Sa, Sa * Dc + Sc * (1 - Da)]
+        // 从公式中可以看到，在SRC模式中，以显示源图像为主，透明度和饱和度利用Da来调节
+        // 而在DST模式中，以显示目标图像为主，透明度和饱和度利用Sa来调节
+        // 所以Mode.DST_ATOP与Mode.DST_IN的关系也是：
+        // 一般而言DST_ATOP是可以和DST_IN通用的，但DST_ATOP所产生的效果图在源图像的透明度不是0或100%的时候，会比DST_IN模式产生的图像更亮些；
+        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_ATOP));
+
+
+        // 到这里有关DST相关模式都讲完了，我们总结一下：
+        // 1、DST相关模式是完全可以使用SRC对应的模式来实现的，只不过需要将目标图像和源图像对调一下即可。
+        // 2、在SRC模式中，是以显示源图像为主，通过目标图像的透明度来调节计算结果的透明度和饱和度，而在DST模式中，是以显示目标图像为主，通过源图像的透明度来调节计算结果的透明度和饱和度。
+
+        /*----------------------------------其它模式--------------------------------------------*/
+
+        //Mode.CLEAR
+        // 前面我们做清空图像的时候用过这个方法，从公式中可以看到，计算结果直接就是[0,0]即空像素。也就是说，源图像所在区域都会变成空像素！
+        // 这样就起到了清空源图像所在区域图像的功能了
+        // mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
+
+
+
+        //Mode.XOR
+        //计算公式为：[Sa + Da - Sa*Da,Sc*(1 - Da) + Dc*(1 - Sa) + min(Sc, Dc)]
+        // 单从示例图像中，好像是异或的功能，即将源图像中除了相交区域以外的部分做为结果。但仔细看看公式，其实并没有这么简单。
+        // 首先看公式中透明度部分：Sa + Da - Sa*Da，就是将目标图像和源图像的透明度相加，然后减去它们的乘积，所以计算结果的透明度会增大（即比目标图像和源图像都大，当其中一个图像的透明度为1时，那结果图像的透明度肯定是1）
+        // 然后再看颜色值部分：Sc*(1 - Da) + Dc*(1 - Sa) + min(Sc, Dc)；表示源图像和目标图像分别以自己的透明度的补值乘以对方的颜色值，然后相加得到结果。最后再加上Sc, Dc中的最小值。
+        // 这个模式太过复杂，在实际应用中应用也比较少，目前没想到有哪些示例，大家有用到的，可以跟我说哦。
+        // mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.XOR));
+
 
 
         canvas.drawBitmap(srcBmp, width / 2, height / 2, mPaint);
@@ -151,6 +238,13 @@ public class MyView extends View {
         mPaint.setXfermode(null);
 
         canvas.restoreToCount(layerID);
+
+
+
+
+        // 1、首先，目标图像和源图像混合，需不需要生成颜色的叠加特效，如果需要叠加特效则从颜色叠加相关模式中选择，有Mode.ADD（饱和度相加）、Mode.DARKEN（变暗），Mode.LIGHTEN（变亮）、Mode.MULTIPLY（正片叠底）、Mode.OVERLAY（叠加），Mode.SCREEN（滤色）
+        // 2、当不需要特效，而需要根据某一张图像的透明像素来裁剪时，就需要使用SRC相关模式或DST相关模式了。由于SRC相关模式与DST相关模式是相通的，唯一不同的是决定当前哪个是目标图像和源图像；
+        // 3、当需要清空图像时，使用Mode.CLEAR
 
     }
 

@@ -16,6 +16,7 @@ public class MyActivity extends Activity implements View.OnClickListener{
         findViewById(R.id.roundsrcin).setOnClickListener(this);
         findViewById(R.id.invertsrcin).setOnClickListener(this);
         findViewById(R.id.eraserview).setOnClickListener(this);
+        findViewById(R.id.eraserview_dst).setOnClickListener(this);
         findViewById(R.id.guaguaview).setOnClickListener(this);
         findViewById(R.id.roundsrcatop).setOnClickListener(this);
         findViewById(R.id.invertsrcatop).setOnClickListener(this);
@@ -57,6 +58,9 @@ public class MyActivity extends Activity implements View.OnClickListener{
                 break;
             case R.id.google_src_in:
                 findViewById(R.id.google_src_in_view).setVisibility(View.VISIBLE);
+                break;
+            case R.id.eraserview_dst:
+                findViewById(R.id.eraserview_view_dst).setVisibility(View.VISIBLE);
                 break;
             default:
                 break;
