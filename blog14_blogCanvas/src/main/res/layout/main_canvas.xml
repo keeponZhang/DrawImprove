@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="3">
+
+        <TableRow>
+            <Button
+                android:id="@+id/matrix_save_flag_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="MATRIX_SAVE_FLAG"
+                android:textAllCaps="false" />
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:id="@+id/clip_save_flag_view_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CLIP_SAVE_FLAG_View"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/alpha_color_falg_view_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ALPHA_COLOR_FALG_VIEW"
+                android:textAllCaps="false" />
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:id="@+id/clip_to_layer_save_flag_view_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CLIP_TO_LAYER_SAVE_FLAG"
+                android:textAllCaps="false" />
+            <Button
+                android:id="@+id/restoretocountview_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="RestoreToCountView"
+                android:textAllCaps="false" />
+        </TableRow>
+    </TableLayout>
+
+
+    <com.harvic.blogCanvas.MATRIX_SAVE_FLAG_View
+        android:id="@+id/matrix_save_flag_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+
+    <com.harvic.blogCanvas.CLIP_SAVE_FLAG_View
+        android:id="@+id/clip_save_flag_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <com.harvic.blogCanvas.ALPHA_COLOR_FALG_VIEW
+        android:id="@+id/alpha_color_falg_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <com.harvic.blogCanvas.CLIP_TO_LAYER_SAVE_FLAG_VIEW
+        android:id="@+id/clip_to_layer_save_flag_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+
+    <com.harvic.blogCanvas.RestoreToCountView
+        android:visibility="gone"
+        android:id="@+id/restoretocountview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
+

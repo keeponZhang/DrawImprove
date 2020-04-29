@@ -1,7 +1,11 @@
 package com.harvic.blogCanvas;
 
 import android.content.Context;
-import android.graphics.*;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -26,9 +30,9 @@ public class SaveLayerUseExample_3_1 extends View {
         canvas.drawBitmap(mBitmap, 0, 0, mPaint);
 
 
-        bmpSkew(canvas);
+        // bmpSkew(canvas);
 
-//        bmpRect(canvas);
+       bmpRect(canvas);
     }
 
     /**

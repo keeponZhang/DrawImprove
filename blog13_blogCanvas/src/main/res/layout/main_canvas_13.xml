@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="3">
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/bitmapcanvasview_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="BitmapCanvasView"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/xfermodeview_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="XfermodeView"
+                android:textAllCaps="false" />
+
+
+
+        </TableRow>
+        <TableRow>
+            <Button
+                android:id="@+id/savelayeruseexample_3_1_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:text="SaveLayerUseExample_3_1"/>
+            <Button
+                android:id="@+id/savelayeralphaview_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SaveLayerAlphaView"
+                android:textAllCaps="false" />
+        </TableRow>
+
+    </TableLayout>
+
+    <com.harvic.blogCanvas.BitmapCanvasView
+        android:id="@+id/bitmapcanvasview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
+
+    <com.harvic.blogCanvas.XfermodeView
+        android:id="@+id/xfermodeview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+    <com.harvic.blogCanvas.SaveLayerUseExample_3_1
+        android:id="@+id/savelayeruseexample_3_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+
+    <com.harvic.blogCanvas.SaveLayerAlphaView
+        android:id="@+id/savelayeralphaview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+
+</LinearLayout>
+

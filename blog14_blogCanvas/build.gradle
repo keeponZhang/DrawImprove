@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 15
+    compileSdkVersion 22
     buildToolsVersion "26.0.2"
 
     defaultConfig {
         applicationId "com.harvic.blogCanvas"
         minSdkVersion 15
-        targetSdkVersion 15
+        targetSdkVersion 22
     }
 
     buildTypes {
